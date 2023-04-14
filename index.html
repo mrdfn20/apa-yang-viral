@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apa Yang Viral</title>
+
+    <!-- icons -->
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      href="assests/hashtag-up-svgrepo-com.svg"
+      type="image/x-icon"
+    />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=PT+Sans+Narrow:wght@400;700&family=Poppins:wght@100;300;400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        font-family: "Bebas Neue", sans-serif;
+      }
+
+      .tagline {
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        background: fixed;
+        background-color: #454545;
+      }
+
+      .tagline h1 {
+        color: white;
+        font-size: 40px;
+        font-weight: 500;
+      }
+
+      .tagline span {
+        color: rgb(184, 184, 184);
+      }
+
+      .main-container {
+        display: flex;
+        margin: 1rem;
+        justify-content: space-between;
+      }
+
+      .main-container .indonesia-viral {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        border: solid #454545;
+        margin-inline-end: 1rem;
+      }
+
+      .main-container .world-viral {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        border: solid #454545;
+      }
+
+      .main-container .indonesia-viral h2,
+      .main-container .world-viral h2 {
+        text-align: center;
+        color: #454545;
+      }
+
+      .indonesia-viral .indonesia-merah {
+        color: red;
+      }
+
+      .indonesia-viral .indonesia-putih {
+        color: wheat;
+      }
+    </style>
+
+    <div class="container tagline">
+      <h1>Apa Yang <span>Viral?</span></h1>
+    </div>
+
+    <div class="main-container">
+      <div class="indonesia-viral">
+        <h2>
+          Sedang Viral di
+          <span class="indonesia-merah"
+            >Indo<span class="indonesia-putih">nesia</span></span
+          >
+        </h2>
+        <div class="wrapper">
+          <script
+            type="text/javascript"
+            src="https://ssl.gstatic.com/trends_nrtr/3316_RC01/embed_loader.js"
+          ></script>
+          <script type="text/javascript">
+            trends.embed.renderWidget("dailytrends", "", {
+              geo: "ID",
+              guestPath: "https://trends.google.com:443/trends/embed/",
+            });
+          </script>
+        </div>
+      </div>
+
+      <div class="world-viral">
+        <h2>Sedang Viral di Dunia</h2>
+        <div class="wrapper">
+          <script
+            type="text/javascript"
+            src="https://ssl.gstatic.com/trends_nrtr/3316_RC01/embed_loader.js"
+          ></script>
+          <script type="text/javascript">
+            trends.embed.renderExploreWidget(
+              "RELATED_TOPICS",
+              {
+                comparisonItem: [{ geo: "", time: "today 1-m" }],
+                category: 0,
+                property: "",
+              },
+              {
+                exploreQuery: "date=today%201-m&hl=in",
+                guestPath: "https://trends.google.com:443/trends/embed/",
+              }
+            );
+          </script>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
